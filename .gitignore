@@ -12,3 +12,13 @@ CMakeUserPresets.json
 .tmp/
 AGENTS.md
 GEMINI.md
+
+# Premake files
+*.filters
+*.user
+*.vcxproj
+*.xcodeproj
+/Box2D/
+bin/
+Makefile
+obj/
