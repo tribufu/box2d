@@ -19,6 +19,4 @@ GEMINI.md
 *.vcxproj
 *.xcodeproj
 /Box2D/
-bin/
 Makefile
-obj/
