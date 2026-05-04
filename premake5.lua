@@ -7,6 +7,8 @@ project "Box2D"
     language "C"
     cdialect "C11"
 
+    removeplatforms { "Any CPU" }
+
     files
     {
         "include/**.h",
