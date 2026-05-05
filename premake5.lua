@@ -1,6 +1,7 @@
 --- @diagnostic disable: undefined-global, undefined-field, lowercase-global
 
 project "Box2D"
+    targetname "box2d"
     location "."
     kind "StaticLib"
     language "C"
