@@ -22,4 +22,4 @@ project "Box2D"
     }
 
     filter "system:android"
-        androidnamespace "com.tribufu.alnilam.vendor.box2d"
+        androidnamespace "com.tribufu.vendor.box2d"
