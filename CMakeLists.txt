@@ -9,6 +9,10 @@ project(box2d
 	LANGUAGES C CXX
 )
 
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/bin/$<LOWER_CASE:$<CONFIG>>/${MTK_PRESET_NAME}")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/bin/$<LOWER_CASE:$<CONFIG>>/${MTK_PRESET_NAME}")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/bin/$<LOWER_CASE:$<CONFIG>>/${MTK_PRESET_NAME}")
+
 # stuff to help debug cmake
 # message(STATUS "cmake tool chain: ${CMAKE_TOOLCHAIN_FILE}")
 # message(STATUS "cmake source dir: ${CMAKE_SOURCE_DIR}")
@@ -74,7 +78,7 @@ if(PROJECT_IS_TOP_LEVEL)
 	option(BOX2D_PROFILE "Enable profiling with Tracy" OFF)
 	option(BOX2D_VALIDATE "Enable heavy validation" ON)
 	option(BOX2D_UNIT_TESTS "Build the Box2D unit tests" ON)
-	
+
 	if(BOX2D_UNIT_TESTS OR BOX2D_SAMPLES OR BOX2D_BENCHMARKS)
 		# Emscripten pthread support
 		if(EMSCRIPTEN)
